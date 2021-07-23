@@ -1,0 +1,30 @@
+BREAK_Squishy_stereo.wav -> Boss_1_MoveAttack_Sound
+DEMOLISH_Metal_Quick_stereo -> Boss_2_Thorn_Sound
+DRAWER_Wood_Kitchen_Open_03_mono -> Boss_2_FollowAttack_Sound
+MONSTER_Growl_Deep_08c_Short_mono -> Boss_2_BigAttack_Sound
+GORE_Splat_Hit_Short_mono -> Boss_1_Move_Sound
+FOOTSTEP_Asphalt_Trainers_Walk_Slow_RR4_mono -> Player_Move_Sound
+WHOOSH_Air_Fast_Wind_RR1_mono -> Player_Dodge_Sound
+WHOOSH_Bright_Short_mono -> Player_Attack_1_Sound
+WHOOSH_Short_02_mono -> Player_Attack_2_Sound
+WHOOSH_Short_03_mono -> Player_Attack_3_Sound
+BLASTER_Complex_Fire_Bright_Trigger_Charge_Noisy_Tail_stereo -> Boss_1_BeamAttack_Sound
+
+https://youtu.be/2TgO-tN5wAM
+https://youtu.be/i9hsWN4ok8k
+https://youtu.be/qfiDM5zF-XQ
+Dungreed Soundtrack - 11. Arcade Days
+
+
+플레이어 타격
+플레이어 피격
+플레이어 사망
+
+보스1 사망
+보스2 사망
+
+==============================================
+MAGIC_SPELL_Sweep_mono -> Boss_2_BigAttack_Sound
+MAGIC_SPELL_Spawn_mono -> Player_Dodge_Sound
+GOLF_Swing_Wood_Miss_Above_Ball_mono -> Player_Attack_1_Sound
+CHARGE_Complex_Wet_12_Semi_Up_500ms_stereo -> 기모을때

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{067ad8d8-09cc-4032-bfe0-583d189bbd24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source\Data">
+      <UniqueIdentifier>{8c24ce66-7447-413b-a756-9cfc34351754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Main">
+      <UniqueIdentifier>{17d26a1d-1f82-4ac8-80f6-1c7f60edf65d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Tile">
+      <UniqueIdentifier>{2606b780-117f-4573-86b3-71cfe96feaba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\APIProject_V1\SLDefine.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\APIProject_V1\SLEngine.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Source\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Source\Tile</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\APIProject_V1\SLEngine.c">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Data.c">
+      <Filter>Source\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.c">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.c">
+      <Filter>Source\Tile</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TOOL.APS">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TOOL.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

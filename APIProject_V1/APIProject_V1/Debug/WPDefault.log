@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (WPDefault.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  SLEngine.c
+  WinMain.c
+  코드를 생성하고 있습니다...
+C:\Users\kocca\Desktop\APIProject_V1\APIProject_V1\WinMain.c(68,19): warning C4013: 'InitilizeSLEngine'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  WPDefault.vcxproj -> C:\Users\kocca\Desktop\APIProject_V1\Debug\APIProject_V1.exe

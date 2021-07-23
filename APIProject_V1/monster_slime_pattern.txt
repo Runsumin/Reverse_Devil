@@ -1,0 +1,395 @@
+switch (pMonster->MonsterState)
+	{
+		// 슬라임 기본 & 이동
+	case Idle:
+		// 몬스터 모션 초기화
+		pMonster->NowMotionIndex = 0;
+		// 시간증가
+		pMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMonster->MonsterDelayTime < 1000)
+		{
+			pMonster->MonDirX = pPlayer->PlayerPosX - pMonster->MonsterPosX;
+			pMonster->MonDirY = pPlayer->PlayerPosY - pMonster->MonsterPosY;
+
+			if (pMonster->MonDirX != 0 && pMonster->MonDirY != 0)
+			{
+				float NorDirX = pMonster->MonDirX / abs(pMonster->MonDirX);
+				float NorDirY = pMonster->MonDirY / abs(pMonster->MonDirY);
+				pMonster->MonsterPosX = pMonster->MonsterPosX + NorDirX * MONSTERIDLESPEED;
+				pMonster->MonsterPosY = pMonster->MonsterPosY + NorDirY * MONSTERIDLESPEED;
+
+			}
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+		}
+		else if (pMonster->MonsterDelayTime > 2200)
+		{
+
+			if (pMonster->MonsterHp > 100)
+			{
+				pMonster->MonsterState = AttPrepar;
+				pMonster->MonsterDelayTime = 0;
+			}
+			else if (pMonster->MonsterHp < 100)
+			{
+				pMonster->MonsterState = beforeLaser;
+				pMonster->MonsterDelayTime = 0;
+			}
+			else 
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			// 몬스터 모션 바꿔주기
+		}
+		break;
+		// 공격 준비
+	case AttPrepar:
+		// 몬스터 모션 초기화
+		pMonster->NowMotionIndex = 1;
+		pMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMonster->MonsterDelayTime > 400)
+		{
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			else
+			{
+				pMonster->MonsterState = RollAttack;
+				pMonster->MonsterDelayTime = 0;
+			}
+		}
+		break;
+		// 구르기 공격
+	case RollAttack:
+		pMonster->NowMotionIndex = 3;
+		pMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMonster->MonsterDelayTime < 2800)
+		{
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			else
+			{
+			// 몬스터 이동한당~
+				pMonster->MonDirX = pPlayer->PlayerPosX - pMonster->MonsterPosX;
+				pMonster->MonDirY = pPlayer->PlayerPosY - pMonster->MonsterPosY;
+				
+				if (pMonster->MonDirX != 0 && pMonster->MonDirY != 0)
+				{
+					float NorDirX = pMonster->MonDirX / abs(pMonster->MonDirX);
+					float NorDirY = pMonster->MonDirY / abs(pMonster->MonDirY);
+					pMonster->MonsterPosX = pMonster->MonsterPosX + NorDirX * MONSTERROLLATTACKSPEED;
+					pMonster->MonsterPosY = pMonster->MonsterPosY + NorDirY * MONSTERROLLATTACKSPEED;
+
+				}
+
+			}
+		}
+		if (pMonster->MonsterDelayTime > 2800)
+		{
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			else
+			{
+				pMonster->MonsterState = AfterAttack;
+				pMonster->MonsterDelayTime = 0;
+			}
+		}
+		break;
+		// 공격한 후
+	case AfterAttack:
+		pMonster->NowMotionIndex = 2;
+		pMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMonster->MonsterDelayTime > 500)
+		{
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			else
+			{
+				pMonster->MonsterDelayTime = 0;
+				pMonster->MonsterState = Idle;
+			}
+
+		}
+		break;
+
+	case beforeLaser:
+		pMonster->NowMotionIndex = 5;
+		pMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMonster->MonsterDelayTime > 100)
+		{
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			else
+			{
+				pMonster->MonsterDelayTime = 0;
+				pMonster->MonsterState = Laser;
+			}
+
+		}
+
+		break;
+	case Laser:
+		if (pLaser->MonEffectInitial == FALSE)
+		{
+			pLaser->theta = atan2f(((float)pMonster->MonsterPosX - (float)pPlayer->PlayerPosX),
+				((float)pMonster->MonsterPosY - (float)pPlayer->PlayerPosY));
+
+			pLaser->Angle = (pLaser->theta * 180 / PI);
+			pLaser->MonEffectPosX = (pMonster->MonsterPosX - 400 * sin(pLaser->theta)) - 230;
+			pLaser->MonEffectPosY = (pMonster->MonsterPosY - 400 * cos(pLaser->theta)) - 200;
+
+			pLaser->MonEffectInitial = TRUE;
+		}
+		pMonster->NowMotionIndex = 7;
+		pMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMonster->MonsterDelayTime > 800)
+		{
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			else
+			{
+				pMonster->MonsterDelayTime = 0;
+				pMonster->MonsterState = AfterLaser;
+				pLaser->MonEffectInitial = FALSE;
+			}
+		}
+		break;
+
+	case AfterLaser:
+		pMonster->NowMotionIndex = 6;
+		pMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMonster->MonsterDelayTime > 250)
+		{
+			if (pMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMonster->MonsterState = Die;
+				// 시간 초기화
+				pMonster->MonsterDelayTime = 0;
+			}
+			else
+			{
+				pMonster->MonsterDelayTime = 0;
+				pMonster->MonsterState = Idle;
+			}
+		}
+		break;
+
+	case Die:
+		pMonster->NowMotionIndex = 4;
+		break;
+	}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	switch (pMagicianMonster->MonsterState)
+	{
+	case MagicianIdle:
+		pMagicianMonster->NowMotionIndex = 0;
+		// 시간증가
+		pMagicianMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMagicianMonster->MonsterDelayTime < 2000)
+		{
+
+			if (pMagicianMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMagicianMonster->MonsterState = Die;
+				// 시간 초기화
+				pMagicianMonster->MonsterDelayTime = 0;
+			}
+		}
+		else if (pMagicianMonster->MonsterDelayTime > 2000 && pMagicianMonster->NowFrame > 7)
+		{
+			// 시간 초기화
+			pMagicianMonster->MonsterDelayTime = 0;
+			// 현재 재생 스프라이트 초기화
+			pMagicianMonster->NowFrame = 0;
+			// 몬스터 모션 바꿔주기
+			pMagicianMonster->MonsterState = SwingMagician_Two_Side_ArmUP;
+
+		}
+		break;
+	case SwingMagician_Two_Side_ArmUP:
+		pMagicianMonster->NowMotionIndex = 1;
+		if (pMagicianMonster->NowFrame > 2)
+		{
+			if (pMagicianMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMagicianMonster->MonsterState = Die;
+			}
+			// 몬스터 모션 바꿔주기
+			pMagicianMonster->NowFrame = 0;
+			pMagicianMonster->MonsterState = SwingMagician_Two_Side_ArmAttack;
+		}
+		break;
+	case SwingMagician_Two_Side_ArmAttack:
+		/// 단순 초기화 과정 - 바뀌지 않는 부분
+		pMagicianMonster->NowMotionIndex = 2;
+		if (pMonsterEffect->MonEffectCheck == FALSE)
+		{
+			// 위치값 받아주기
+			pMonsterEffect->MonEffectPosX = pPlayer->PlayerPosX;
+			pMonsterEffect->MonEffectPosY = pPlayer->PlayerPosY;
+			pMonsterEffect->MonEffectNowFrame = 0;
+			pMonsterEffect->MonEffectCheck = TRUE;
+		}
+		if (pMonsterEffect->MonEffectCheck == TRUE && pMonsterEffect->MonEffectIndexCheck == FALSE)
+		{
+			pMonsterEffect->MonEffectNowMotionIndex = 0;
+			pMonsterEffect->MonEffectIndexCheck = TRUE;
+		}
+		/// 루프가 도는 부분 이부분에서 바꿔준다
+		if (pMonsterEffect->MonEffectCheck == TRUE && pMonsterEffect->MonEffectIndexCheck == TRUE)
+		{
+			if (pMonsterEffect->MonEffectNowFrame > 6 && pMonsterEffect->MonEffectNowMotionIndex == 0)
+			{
+				pMonsterEffect->MonEffectIndexCheck = TRUE;
+				pMonsterEffect->MonEffectNowMotionIndex = 1;
+				pMonsterEffect->MonEffectNowFrame = 0;
+			}
+			if (pMonsterEffect->MonEffectNowMotionIndex == 1)
+			{
+				pMagicianMonster->MonsterDelayTime += SLGetElapsedTime();
+			}
+			if (pMonsterEffect->MonEffectNowMotionIndex == 1 && pMagicianMonster->MonsterDelayTime > 500)
+			{
+				pMonsterEffect->MonEffectNowMotionIndex = 2;
+				pMonsterEffect->MonEffectNowFrame = 0;
+			}
+			if (pMonsterEffect->MonEffectNowMotionIndex == 2)
+			{
+				if (pMonsterEffect->MonEffectNowFrame > 2)
+				{
+					pMonsterEffect->MonEffectNowMotionIndex = 0;
+					pMagicianMonster->MonsterDelayTime = 0;
+					pMonsterEffect->MonEffectCheck = FALSE;
+					pMonsterEffect->MonEffectIndexCheck = FALSE;
+					pMagicianMonster->MonsterState = SwingMagician_Two_Side_Arm_Down;
+				}
+			}
+		}
+		break;
+	case SwingMagician_Two_Side_Arm_Down:
+		pMagicianMonster->NowMotionIndex = 3;
+		if (pMagicianMonster->NowFrame > 0)
+		{
+			if (pMagicianMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMagicianMonster->MonsterState = Die;
+			}
+			// 몬스터 모션 바꿔주기
+			pMagicianMonster->MonsterState = MagicianIdle;
+			pMagicianMonster->NowFrame = 0;
+		}
+		break;
+	case SwingMagician_Left_ArmUP:
+		pMagicianMonster->NowMotionIndex = 4;
+		if (pMagicianMonster->NowFrame > 5)
+		{
+			if (pMagicianMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMagicianMonster->MonsterState = Die;
+			}
+			// 몬스터 모션 바꿔주기
+			pMagicianMonster->NowFrame = 0;
+			pMagicianMonster->MonsterState = SwingMagician_Left_ArmAttack;
+		}
+		break;
+	case SwingMagician_Left_ArmAttack:
+		pMagicianMonster->NowMotionIndex = 5;
+		pMagicianMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMagicianMonster->MonsterDelayTime > 1000)
+		{
+			if (pMagicianMonster->MonsterHp < 0)
+			{
+				// 몬스터 모션 바꿔주기
+				pMagicianMonster->MonsterState = Die;
+				// 시간 초기화
+				pMagicianMonster->MonsterDelayTime = 0;
+			}
+
+
+			// 몬스터 모션 바꿔주기
+			pMagicianMonster->MonsterState = SwingMagician_Left_ArmDown;
+			// 시간 초기화
+			pMagicianMonster->MonsterDelayTime = 0;
+			// 모션 초기화
+			pMagicianMonster->NowFrame = 0;
+		}
+		break;
+	case SwingMagician_Left_ArmDown:
+		pMagicianMonster->NowMotionIndex = 6;
+		if (pMonsterDonwAtt->MonEffectCheck == FALSE)
+		{
+			// 위치값 받아주기
+			pMonsterDonwAtt->MonEffectPosX = pPlayer->PlayerPosX - 320;
+			pMonsterDonwAtt->MonEffectPosY = pPlayer->PlayerPosY - 300;
+			pMonsterDonwAtt->MonEffectCheck = TRUE;
+		}
+		pMagicianMonster->MonsterDelayTime += SLGetElapsedTime();
+		if (pMagicianMonster->MonsterDelayTime < 1000)
+		{
+			pMagicianMonster->NowMotionIndex = 0;
+		}
+		else
+		{
+			if (pMagicianMonster->NowFrame > 2)
+			{
+				if (pMagicianMonster->MonsterHp < 0)
+				{
+					// 몬스터 모션 바꿔주기
+					pMagicianMonster->MonsterState = Die;
+				}
+				// 몬스터 모션 초기화
+				pMagicianMonster->NowFrame = 0;
+				// 몬스터 모션 바꿔주기
+				pMagicianMonster->MonsterState = MagicianIdle;
+				pMagicianMonster->MonsterDelayTime = 0;
+				pMonsterDonwAtt->MonEffectCheck = FALSE;
+			}
+		}
+		
+		break;
+	case MagicianDie:
+		pMagicianMonster->NowMotionIndex = 7;
+		break;
+	}

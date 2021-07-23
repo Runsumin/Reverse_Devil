@@ -1,0 +1,91 @@
+﻿  Data.c
+  Animation.c
+  CollisionMgr.c
+  dbg_memory.c
+  Main.c
+  Monster.c
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(123,48): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(124,83): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(125,83): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(150,83): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(151,83): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(332,46): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(333,84): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(334,84): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(148,1): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(149,1): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(683,48): warning C4020: 'sqrt': 실제 매개 변수가 너무 많습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(688,128): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(689,138): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(691,144): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(692,154): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(694,160): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(695,170): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(697,145): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(698,155): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Monster.c(683,1): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player.c
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(287,78): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(288,78): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(285,1): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(286,1): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(329,42): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(333,67): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(334,67): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(336,74): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(337,74): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(410,63): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(411,63): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(409,1): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(474,146): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(475,168): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(478,162): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(479,184): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(482,184): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(483,206): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(486,167): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Player.c(487,189): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SceneMgr.c
+  SLEngine.c
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(308,43): warning C4020: 'sqrt': 실제 매개 변수가 너무 많습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(323,71): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(324,82): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(325,87): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(326,98): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(327,88): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(328,88): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(308,1): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(382,43): warning C4020: 'sqrt': 실제 매개 변수가 너무 많습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(397,71): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(398,104): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(400,87): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(401,120): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(403,88): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(404,110): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(382,1): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(493,71): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(494,104): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(495,83): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(496,116): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(497,83): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\SLEngine.c(498,105): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SLTime.c
+  Sound.c
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(26,69): warning C4047: '함수': 'DWORD_PTR'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(26,65): warning C4024: 'mciSendCommandA': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(39,78): warning C4047: '함수': 'DWORD_PTR'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(39,74): warning C4024: 'mciSendCommandA': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(54,59): warning C4047: '함수': 'DWORD_PTR'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(54,55): warning C4024: 'mciSendCommandA': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(88,67): warning C4047: '함수': 'DWORD_PTR'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(88,63): warning C4024: 'mciSendCommandA': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(88,73): warning C4047: '함수': 'DWORD_PTR'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(88,69): warning C4024: 'mciSendCommandA': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(109,68): warning C4047: '함수': 'DWORD_PTR'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(109,64): warning C4024: 'mciSendCommandA': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(109,74): warning C4047: '함수': 'DWORD_PTR'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\APIProject_V1\Sound.c(109,70): warning C4024: 'mciSendCommandA': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+  TerrainObj.c
+  WinMain.c
+  코드를 생성하고 있습니다...
+  WPDefault.vcxproj -> D:\Mini_Project\WInAPI_Mini\5_Project\APIProject_V1\Debug\APIProject_V1.exe

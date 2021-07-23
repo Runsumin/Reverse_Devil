@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\WinMain">
+      <UniqueIdentifier>{6a2b4e0c-b5ca-4f5f-8a1c-005a604ccdd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Main">
+      <UniqueIdentifier>{74bbfff6-01fc-4614-b9d2-3c9e5fab109c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Animation">
+      <UniqueIdentifier>{3305fe94-b818-45d9-9ba7-0c0cc28cb9a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Object">
+      <UniqueIdentifier>{17bc2fbb-10b6-4214-b512-f7b2fa5f59a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Object\Player">
+      <UniqueIdentifier>{42bdf740-c982-44ab-b66a-bb10f8a14229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{a5bfd6fd-89c1-41fa-89a7-7d6fecf854e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Object\Monster">
+      <UniqueIdentifier>{0a53de5d-ef14-4478-9dc9-0eeba1a04d77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Mgr">
+      <UniqueIdentifier>{6798925b-9136-4d5c-90df-ad13c2c3e375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Mgr\CollisionMgr">
+      <UniqueIdentifier>{6bf19d20-5b9d-4453-8cf9-cda6d575ae93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Animation\Data">
+      <UniqueIdentifier>{3bfc1575-de98-44dc-b3bc-f608b0a0a1b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\TIme">
+      <UniqueIdentifier>{36246e88-c978-40d8-ac2a-95e5307f7782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\HeapCheck">
+      <UniqueIdentifier>{66e0c390-ec8f-4bc5-a1e7-56ea468b6803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Mgr\SceneMgr">
+      <UniqueIdentifier>{37f8d6bd-8ba8-4710-98ba-cc714cff3d63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Object\Terrain">
+      <UniqueIdentifier>{c3b9ecb6-2a59-4f34-9822-f09637459820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UI">
+      <UniqueIdentifier>{53f55fc3-57ec-4de4-a060-9e7f1b55f03c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Mgr\SoundMgr">
+      <UniqueIdentifier>{8dc54cf7-c383-481e-89f1-70efcda07e0d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SLEngine.c">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.c">
+      <Filter>Source\WinMain</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.c">
+      <Filter>Source\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapTool\Data.c">
+      <Filter>Source\Animation\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.c">
+      <Filter>Source\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.c">
+      <Filter>Source\Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionMgr.c">
+      <Filter>Source\Mgr\CollisionMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="dbg_memory.c">
+      <Filter>Lib\HeapCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="SLTime.c">
+      <Filter>Lib\TIme</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.c">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMgr.c">
+      <Filter>Source\Mgr\SceneMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainObj.c">
+      <Filter>Source\Object\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.c">
+      <Filter>Source\Mgr\SoundMgr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SLEngine.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Source\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="SLDefine.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Source\Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionMgr.h">
+      <Filter>Source\Mgr\CollisionMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="dbg_memory.h">
+      <Filter>Lib\HeapCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="SLTime.h">
+      <Filter>Lib\TIme</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Source\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMgr.h">
+      <Filter>Source\Mgr\SceneMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainObj.h">
+      <Filter>Source\Object\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>Source\Mgr\SoundMgr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WPDefault.rc">
+      <Filter>Graphics</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="onimusha.bmp">
+      <Filter>Graphics</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cursor1.cur">
+      <Filter>Graphics</Filter>
+    </None>
+  </ItemGroup>
+</Project>
